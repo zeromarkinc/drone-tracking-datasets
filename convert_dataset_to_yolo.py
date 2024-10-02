@@ -1,8 +1,10 @@
 import os
 import shutil
+
 import cv2
 import numpy as np
 from tqdm import tqdm
+
 
 def read_detections(label_path):
     detections = {}
