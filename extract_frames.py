@@ -6,7 +6,6 @@ import numpy as np
 import tqdm
 
 
-
 def copy_to_datasets_folder(source_folder, destination_folder):
     os.makedirs(destination_folder, exist_ok=True)
     for item in os.listdir(source_folder):
