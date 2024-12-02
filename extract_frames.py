@@ -19,6 +19,8 @@ def copy_to_datasets_folder(source_folder, destination_folder):
 if __name__ == "__main__":
     datasets = ["dataset1", "dataset2", "dataset3", "dataset4"]
     cam_ids = ["cam0", "cam1", "cam2", "cam3", "cam4", "cam5", "cam6"]
+    datasets = ["dataset1"]
+    cam_ids = ["cam0"]
     
     # Copy frames to datasets/frames
     os.makedirs("datasets/frames", exist_ok=True)
