@@ -10,6 +10,7 @@ python = "^3.10"
 opencv-python = "^4.10.0.84"
 torchvision = "^0.19.1"
 black = "^24.8.0"
+tqdm = "^4.67.1"
 
 
 [build-system]

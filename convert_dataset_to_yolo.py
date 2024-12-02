@@ -56,7 +56,7 @@ def process_dataset(dataset, cam_id, output_folder, default_box_size=0.05):
             continue
         
         # Copy image to output folder
-        output_image_path = os.path.join(output_image_folder, f"{dataset}_{cam_id}___frame_{frame_number:04d}.jpg")
+        output_image_path = os.path.join(output_image_folder, f"{dataset}_{cam_id}_frame_{frame_number:04d}.jpg")
         shutil.copy2(frame_path, output_image_path)
         
         # Create YOLO format annotation
@@ -66,13 +66,15 @@ def process_dataset(dataset, cam_id, output_folder, default_box_size=0.05):
             y = y / height
             yolo_annotation = convert_to_yolo_format(x, y, default_box_size, default_box_size)
             
-            output_label_path = os.path.join(output_label_folder, f"{dataset}_{cam_id}___frame_{frame_number:04d}.txt")
+            output_label_path = os.path.join(output_label_folder, f"{dataset}_{cam_id}_frame_{frame_number:04d}.txt")
             with open(output_label_path, 'w') as f:
                 f.write(yolo_annotation)
 
 if __name__ == "__main__":
     datasets = ["dataset1", "dataset2", "dataset3", "dataset4"]
     cam_ids = ["cam0", "cam1", "cam2", "cam3", "cam4", "cam5", "cam6"]
+    datasets = ["dataset1"]
+    cam_ids = ["cam0"]
     
     output_folder = "yolo_dataset"
     

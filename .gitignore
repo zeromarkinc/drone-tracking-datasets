@@ -6,3 +6,4 @@
 *.MTS
 *.txt
 drone_tracking_dataset_yolo_format/
+*.zip

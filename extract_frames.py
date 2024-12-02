@@ -22,19 +22,21 @@ if __name__ == "__main__":
     datasets = ["dataset1"]
     cam_ids = ["cam0"]
     
+    output_path = "datasets"
+    
     # Copy frames to datasets/frames
-    os.makedirs("datasets/frames", exist_ok=True)
+    os.makedirs(output_path, exist_ok=True)
     for dataset in datasets:
         for cam_id in cam_ids:
             source_folder = f"{dataset}/{cam_id}_frames"
             if os.path.exists(source_folder):
-                destination_folder = f"datasets/frames/{dataset}_{cam_id}"
+                destination_folder = f"{output_path}/{dataset}_{cam_id}"
                 copy_to_datasets_folder(source_folder, destination_folder)
     
     # Copy detections to datasets/detections
-    os.makedirs("datasets/detections", exist_ok=True)
+    os.makedirs(f"{output_path}/detections", exist_ok=True)
     for dataset in datasets:
         source_folder = f"{dataset}/detections"
-        destination_folder = f"datasets/detections/{dataset}"
+        destination_folder = f"{output_path}/detections/{dataset}"
         if os.path.exists(source_folder):
             copy_to_datasets_folder(source_folder, destination_folder)
