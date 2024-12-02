@@ -22,7 +22,7 @@ def convert_to_yolo_format(x, y, w, h):
 
 def process_dataset(dataset, cam_id, output_folder, default_box_size=0.05):
     detection_file = f"datasets/detections/{dataset}/{cam_id}.txt"
-    frames_folder = f"datasets/frames/{dataset}_{cam_id}"
+    frames_folder = f"datasets/{dataset}_{cam_id}"
     
     if not os.path.exists(detection_file):
         print(f"Detection file not found: {detection_file}")
@@ -73,7 +73,7 @@ def process_dataset(dataset, cam_id, output_folder, default_box_size=0.05):
 if __name__ == "__main__":
     datasets = ["dataset1", "dataset2", "dataset3", "dataset4"]
     cam_ids = ["cam0", "cam1", "cam2", "cam3", "cam4", "cam5", "cam6"]
-    datasets = ["dataset1"]
+    datasets = ["dataset3"]
     cam_ids = ["cam0"]
     
     output_folder = "yolo_dataset"

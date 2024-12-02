@@ -8,7 +8,7 @@ if __name__ == "__main__":
     datasets = ["dataset1", "dataset2", "dataset3", "dataset4"]
     cam_ids = ["cam0", "cam1", "cam2", "cam3", "cam4", "cam5", "cam6"]
     
-    datasets = ["dataset1"]
+    datasets = ["dataset3"]
     cam_ids = ["cam0"]
 
     for dataset in datasets:
